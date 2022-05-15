@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --primary-color: hsla(240, 6%, 21%, 1);
+  --card-text-selected: hsla(0, 0%, 100%, 1);
+
+  --bg-cards: hsla(240, 9%, 89%, 1);
+  --bg-cards-selected: hsla(194, 97%, 31%, 1);
+  --bg-body: hsla(0, 0%, 100%, 1);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--primary-color);
+  background: var(--bg-body);
+
+  width: 100%;
+  height: 100%;
+
+  padding: 30rem 55rem;
+}
+
+main {
+  width: 82rem;
+  height: 33.6rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+main section.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main section.timer p {
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 13.68rem;
+
+  text-align: center;
+
+  color: var(--primary-color);
+
+  width: 100%;
+}
+
+main section.timer section.controls {
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 100%;
+}
+
+main section.timer section.controls button {
+  background: none;
+  border: none;
+}
+
+main section.sounds {
+  display: grid;
+  grid-template-areas:
+    'A B '
+    'C D';
+  gap: 3.2rem;
+}
+
+main section.sounds button {
+  border: none;
+
+  width: 13.8rem;
+  height: 15.2rem;
+
+  background: var(--bg-cards);
+  border-radius: 2.4rem;
+}
+
+main section.sounds:nth-child(1) {
+  grid-area: A;
+}
+
+main section.sounds:nth-child(2) {
+  grid-area: B;
+}
+
+main section.sounds:nth-child(3) {
+  grid-area: C;
+}
+
+main section.sounds:nth-child(4) {
+  grid-area: D;
+}
+
+button {
+  cursor: pointer;
+}
+
+main section.sounds button.rain {
+  background: var(--bg-cards-selected);
+}
+
+main section.sounds button.rain svg path {
+  fill: var(--card-text-selected);
+}
