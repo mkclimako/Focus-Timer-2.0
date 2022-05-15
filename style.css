@@ -38,6 +38,7 @@ main section.timer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 3rem;
 }
 
 main section.timer p {
@@ -55,7 +56,7 @@ main section.timer p {
 main section.timer section.controls {
   display: flex;
   justify-content: space-evenly;
-
+  gap: 4rem;
   width: 100%;
 }
 
