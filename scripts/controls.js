@@ -20,17 +20,20 @@ export default function Controls({
 
   const setTime = () => {
     setButton.classList.add('hide');
-    playButton.classList.add('hide');
-    pauseButton.classList.remove('hide');
+    playButton.classList.remove('hide');
+    pauseButton.classList.add('hide');
     stopButton.classList.remove('hide');
   };
 
-  const stop = () => {
+  const resetControls = () => {
     stopButton.classList.add('hide');
     pauseButton.classList.add('hide');
     playButton.classList.remove('hide');
     setButton.classList.remove('hide');
   };
 
-  return { play, pause, setTime,stop };
+  return { play, pause, setTime,resetControls };
 }
+
+
+

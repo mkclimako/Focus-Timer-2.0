@@ -13,6 +13,8 @@ const coffeeShopSound = document.querySelector('.coffeeShop');
 const moreMinutesButton = document.querySelector('.moreMinutes');
 const lessMinutesButton = document.querySelector('.lessMinutes');
 
+const minutesDisplay = document.querySelector('.minutes');
+const secondsDisplay = document.querySelector('.seconds');
 export {
   playButton,
   pauseButton,
@@ -24,5 +26,6 @@ export {
   coffeeShopSound,
   moreMinutesButton,
   lessMinutesButton,
-  body
+  body,minutesDisplay,secondsDisplay
 };
+
