@@ -6,7 +6,7 @@ const stopButton = document.querySelector('.stop');
 const forestSound = document.querySelector('.forest');
 const rainSound = document.querySelector('.rain');
 const fireplaceSound = document.querySelector('.fireplace');
-const coffeShopSound = document.querySelector('.coffeShop');
+const coffeeShopSound = document.querySelector('.coffeeShop');
 
 const moreMinutesButton = document.querySelector('.moreMinutes');
 const lessMinutesButton = document.querySelector('.lessMinutes');
@@ -17,7 +17,7 @@ export {
   forestSound,
   rainSound,
   fireplaceSound,
-  coffeShopSound,
+  coffeeShopSound,
   moreMinutesButton,
   lessMinutesButton,
   body
