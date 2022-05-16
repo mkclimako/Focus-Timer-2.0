@@ -1,6 +1,8 @@
 const body = document.querySelector('body');
 
 const playButton = document.querySelector('.play');
+const pauseButton = document.querySelector('.pause');
+const setButton = document.querySelector('.set');
 const stopButton = document.querySelector('.stop');
 
 const forestSound = document.querySelector('.forest');
@@ -13,6 +15,8 @@ const lessMinutesButton = document.querySelector('.lessMinutes');
 
 export {
   playButton,
+  pauseButton,
+  setButton,
   stopButton,
   forestSound,
   rainSound,
