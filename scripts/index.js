@@ -1,1 +1,13 @@
-import {body, playButton,stopButton,forestSound,rainSound,fireplaceSound,coffeShopSound,moreMinutesButton,lessMinutesButton } from "./elements.js";
+import {
+  body,
+  playButton,
+  stopButton,
+  forestSound,
+  rainSound,
+  fireplaceSound,
+  coffeeShopSound,
+  moreMinutesButton,
+  lessMinutesButton,
+} from './elements.js';
+
+import { forest, rain, fireplace, coffeeShop } from './sounds.js';
