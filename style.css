@@ -72,6 +72,10 @@ main section.timer section.controls {
   width: 100%;
 }
 
+main section.timer section.controls .hide {
+  display: none;
+}
+
 main section.timer section.controls button {
   background: none;
   border: none;
