@@ -1,4 +1,8 @@
-export default function Timer({ minutesDisplay, secondsDisplay,resetControls }) {
+export default function Timer({
+  minutesDisplay,
+  secondsDisplay,
+  resetControls,
+}) {
   let minutes = Number(minutesDisplay.textContent);
   let timerTimeout;
 
@@ -11,25 +15,26 @@ export default function Timer({ minutesDisplay, secondsDisplay,resetControls }) 
   };
 
   const sessionTime = () => {
-     minutes = Number(
-      prompt('How many minutes would you like to set?') || '45'
-    );
-     updateDisplay(minutes, '0');
+    minutes = Number(prompt('How many minutes would you like to set?'));
+    if(minutes <= 0) {
+      minutes = 45
+    }
+    updateDisplay(minutes, '0');
   };
 
   const counter = () => {
-   timerTimeout = setTimeout(() => {
+    timerTimeout = setTimeout(() => {
       let minutes = Number(minutesDisplay.textContent);
       let seconds = Number(secondsDisplay.textContent);
       let isFinished = minutes <= 0 && seconds <= 0;
 
       updateDisplay(minutes, 0);
 
-        if (isFinished) {
-            resetControls();
-            resetCounter();
-            return
-        }
+      if (isFinished) {
+        resetControls();
+        resetCounter();
+        return;
+      }
 
       if (seconds <= 0) {
         seconds = 60;
@@ -41,26 +46,26 @@ export default function Timer({ minutesDisplay, secondsDisplay,resetControls }) 
     }, 1000);
   };
 
-  const moreMinutes = ()=> {
+  const moreMinutes = () => {
     minutes += 5;
-    updateDisplay(minutes,secondsDisplay.textContent);
-  }
+    updateDisplay(minutes, secondsDisplay.textContent);
+  };
 
-  const lessMinutes = ()=> {
-      minutes -= 5;
-      
-      updateDisplay(minutes,secondsDisplay.textContent);
-  }
+  const lessMinutes = () => {
+    minutes -= 5;
+
+    updateDisplay(minutes, secondsDisplay.textContent);
+  };
 
   const pauseCounter = () => {
     clearTimeout(timerTimeout);
-  }
+  };
 
   const resetCounter = () => {
-      resetControls();
-      updateDisplay(minutes,'0')
-      pauseCounter();
-  }
+    resetControls();
+    updateDisplay(minutes, '0');
+    pauseCounter();
+  };
   return {
     sessionTime,
     counter,
@@ -68,6 +73,6 @@ export default function Timer({ minutesDisplay, secondsDisplay,resetControls }) 
     pauseCounter,
     resetCounter,
     moreMinutes,
-    lessMinutes
+    lessMinutes,
   };
 }
