@@ -15,9 +15,10 @@ export default function Timer({
   };
 
   const sessionTime = () => {
-    minutes = Number(prompt('How many minutes would you like to set?'));
-    if(minutes <= 0) {
-      minutes = 45
+    minutes = prompt('How many minutes would you like to set?');
+   let isNumber = typeof minutes === 'Number';
+    if(minutes < 25 || minutes !== isNumber) {
+      minutes = 25
     }
     updateDisplay(minutes, '0');
   };
@@ -48,11 +49,20 @@ export default function Timer({
 
   const moreMinutes = () => {
     minutes += 5;
+    if(minutes > 60) {
+      minutes = 60;
+      secondsDisplay.textContent = '00';
+    }
+
     updateDisplay(minutes, secondsDisplay.textContent);
   };
 
   const lessMinutes = () => {
     minutes -= 5;
+    if(minutes < 25) {
+      alert('You cannot have less than 25 minutes');
+      minutes = 25
+    }
 
     updateDisplay(minutes, secondsDisplay.textContent);
   };
