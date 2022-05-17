@@ -2,7 +2,7 @@ export default function Timer({
   minutesDisplay,
   secondsDisplay,
   resetControls,
-  sessionCompleted
+  sessionCompleted,
 }) {
   let minutes = Number(minutesDisplay.textContent);
   let timerTimeout;
@@ -17,9 +17,9 @@ export default function Timer({
 
   const sessionTime = () => {
     minutes = prompt('How many minutes would you like to set?');
-   let isNumber = typeof minutes === 'Number';
-    if(minutes < 25 || minutes !== isNumber) {
-      minutes = 25
+    let isNumber = typeof minutes === 'Number';
+    if (minutes < 25 || minutes !== isNumber) {
+      minutes = 25;
     }
     updateDisplay(minutes, '0');
   };
@@ -51,7 +51,7 @@ export default function Timer({
 
   const moreMinutes = () => {
     minutes += 5;
-    if(minutes > 60) {
+    if (minutes > 60) {
       minutes = 60;
       secondsDisplay.textContent = '00';
     }
@@ -61,9 +61,9 @@ export default function Timer({
 
   const lessMinutes = () => {
     minutes -= 5;
-    if(minutes < 25) {
+    if (minutes < 25) {
       alert('You cannot have less than 25 minutes');
-      minutes = 25
+      minutes = 25;
     }
 
     updateDisplay(minutes, secondsDisplay.textContent);
@@ -78,6 +78,7 @@ export default function Timer({
     updateDisplay(minutes, '0');
     pauseCounter();
   };
+
   return {
     sessionTime,
     counter,

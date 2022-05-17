@@ -36,36 +36,42 @@ export default function Controls({
     setButton.classList.remove('hide');
   };
 
-  const forestSoundButton = () =>{
+  const forestSoundButton = () => {
     forestSound.classList.add('selected');
     fireplaceSound.classList.remove('selected');
     rainSound.classList.remove('selected');
     coffeeShopSound.classList.remove('selected');
-  }
+  };
 
-  const rainSoundButton = () =>{
+  const rainSoundButton = () => {
     rainSound.classList.add('selected');
     forestSound.classList.remove('selected');
     fireplaceSound.classList.remove('selected');
     coffeeShopSound.classList.remove('selected');
-  }
+  };
 
-  const fireplaceSoundButton = () =>{
+  const fireplaceSoundButton = () => {
     fireplaceSound.classList.add('selected');
     forestSound.classList.remove('selected');
     rainSound.classList.remove('selected');
     coffeeShopSound.classList.remove('selected');
-  }
+  };
 
-  const coffeeShopSoundButton = () =>{
+  const coffeeShopSoundButton = () => {
     coffeeShopSound.classList.add('selected');
     forestSound.classList.remove('selected');
     fireplaceSound.classList.remove('selected');
     rainSound.classList.remove('selected');
-  }
+  };
 
-  return { play, pause, setTime,resetControls,forestSoundButton,rainSoundButton,fireplaceSoundButton,coffeeShopSoundButton };
+  return {
+    play,
+    pause,
+    setTime,
+    resetControls,
+    forestSoundButton,
+    rainSoundButton,
+    fireplaceSoundButton,
+    coffeeShopSoundButton,
+  };
 }
-
-
-
