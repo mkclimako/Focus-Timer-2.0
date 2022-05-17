@@ -7,6 +7,12 @@ export default function Controls({
   rainSound,
   fireplaceSound,
   coffeeShopSound,
+  darkModeButton,
+  lightModeButton,
+  body,
+  main,
+  p,
+ svgs
 }) {
   const play = () => {
     playButton.classList.add('hide');
@@ -64,6 +70,28 @@ export default function Controls({
     rainSound.classList.remove('selected');
   };
 
+  const darkMode = () => {
+    darkModeButton.classList.add('hide');
+    lightModeButton.classList.remove('hide');
+    body.classList.add('darkTheme');
+    main.classList.add('darkTheme');
+    p.classList.add('darkTheme');
+    svgs.forEach((svg) => {
+      svg.classList.add('darkTheme');
+    })
+  }
+
+  const lightMode = () => {
+    darkModeButton.classList.remove('hide');
+    lightModeButton.classList.add('hide');
+    body.classList.remove('darkTheme');
+    main.classList.remove('darkTheme');
+    p.classList.remove('darkTheme');
+    svgs.forEach((svg) => {
+      svg.classList.remove('darkTheme');
+    })
+  }
+
   return {
     play,
     pause,
@@ -73,5 +101,7 @@ export default function Controls({
     rainSoundButton,
     fireplaceSoundButton,
     coffeeShopSoundButton,
+    darkMode,
+    lightMode
   };
 }

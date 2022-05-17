@@ -9,9 +9,11 @@ import {
   coffeeShopSound,
   moreMinutesButton,
   lessMinutesButton,
-  body,
+  body,main,p,svgs,
   minutesDisplay,
   secondsDisplay,
+  darkModeButton,
+  lightModeButton
 } from './elements.js';
 
 import Controls from './controls.js';
@@ -28,6 +30,11 @@ const control = Controls({
   rainSound,
   fireplaceSound,
   coffeeShopSound,
+  darkModeButton,
+  lightModeButton,
+  body,
+  main,
+  p,svgs
 });
 const timer = Timer({
   minutesDisplay,
@@ -112,3 +119,11 @@ soundsButtons.forEach((button) => {
     sound.fireplace.pause();
   });
 });
+
+darkModeButton.addEventListener('click', () => {
+  control.darkMode();
+})
+
+lightModeButton.addEventListener('click', () => {
+  control.lightMode();
+})
