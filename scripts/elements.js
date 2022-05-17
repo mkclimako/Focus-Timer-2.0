@@ -1,4 +1,7 @@
 const body = document.querySelector('body');
+const main = document.querySelector('main');
+const p = document.querySelector('p');
+const svgs = document.querySelectorAll('svg');
 
 const playButton = document.querySelector('.play');
 const pauseButton = document.querySelector('.pause');
@@ -15,6 +18,10 @@ const lessMinutesButton = document.querySelector('.lessMinutes');
 
 const minutesDisplay = document.querySelector('.minutes');
 const secondsDisplay = document.querySelector('.seconds');
+
+const darkModeButton = document.querySelector('.darkMode');
+const lightModeButton = document.querySelector('.lightMode');
+
 export {
   playButton,
   pauseButton,
@@ -26,6 +33,12 @@ export {
   coffeeShopSound,
   moreMinutesButton,
   lessMinutesButton,
-  body,minutesDisplay,secondsDisplay
+  body,
+  minutesDisplay,
+  secondsDisplay,
+  darkModeButton,
+  lightModeButton,
+  main,
+  p,
+  svgs
 };
-
