@@ -2,6 +2,7 @@ export default function Timer({
   minutesDisplay,
   secondsDisplay,
   resetControls,
+  sessionCompleted
 }) {
   let minutes = Number(minutesDisplay.textContent);
   let timerTimeout;
@@ -33,6 +34,7 @@ export default function Timer({
       if (isFinished) {
         resetControls();
         resetCounter();
+        sessionCompleted();
         return;
       }
 
