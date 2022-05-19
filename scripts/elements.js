@@ -40,5 +40,5 @@ export {
   lightModeButton,
   main,
   p,
-  svgs
+  svgs,
 };

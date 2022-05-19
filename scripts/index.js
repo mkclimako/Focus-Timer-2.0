@@ -9,11 +9,14 @@ import {
   coffeeShopSound,
   moreMinutesButton,
   lessMinutesButton,
-  body,main,p,svgs,
+  body,
+  main,
+  p,
+  svgs,
   minutesDisplay,
   secondsDisplay,
   darkModeButton,
-  lightModeButton
+  lightModeButton,
 } from './elements.js';
 
 import Controls from './controls.js';
@@ -34,7 +37,8 @@ const control = Controls({
   lightModeButton,
   body,
   main,
-  p,svgs
+  p,
+  svgs,
 });
 const timer = Timer({
   minutesDisplay,
@@ -83,6 +87,7 @@ forestSound.addEventListener('click', () => {
   sound.rain.pause();
   sound.fireplace.pause();
   sound.coffeeShop.pause();
+  sound.forestVolumeControlBtn();
 });
 
 rainSound.addEventListener('click', () => {
@@ -91,6 +96,7 @@ rainSound.addEventListener('click', () => {
   sound.forest.pause();
   sound.fireplace.pause();
   sound.coffeeShop.pause();
+  sound.rainVolumeControlBtn();
 });
 
 fireplaceSound.addEventListener('click', () => {
@@ -99,6 +105,7 @@ fireplaceSound.addEventListener('click', () => {
   sound.forest.pause();
   sound.rain.pause();
   sound.coffeeShop.pause();
+  sound.fireplaceVolumeControlBtn();
 });
 
 coffeeShopSound.addEventListener('click', () => {
@@ -107,6 +114,7 @@ coffeeShopSound.addEventListener('click', () => {
   sound.forest.pause();
   sound.rain.pause();
   sound.fireplace.pause();
+  sound.coffeeShopeVolumeControlBtn();
 });
 
 const soundsButtons = [forestSound, rainSound, fireplaceSound, coffeeShopSound];
@@ -122,8 +130,8 @@ soundsButtons.forEach((button) => {
 
 darkModeButton.addEventListener('click', () => {
   control.darkMode();
-})
+});
 
 lightModeButton.addEventListener('click', () => {
   control.lightMode();
-})
+});

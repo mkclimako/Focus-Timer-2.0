@@ -12,7 +12,7 @@ export default function Controls({
   body,
   main,
   p,
- svgs
+  svgs,
 }) {
   const play = () => {
     playButton.classList.add('hide');
@@ -78,8 +78,8 @@ export default function Controls({
     p.classList.add('darkTheme');
     svgs.forEach((svg) => {
       svg.classList.add('darkTheme');
-    })
-  }
+    });
+  };
 
   const lightMode = () => {
     darkModeButton.classList.remove('hide');
@@ -89,8 +89,8 @@ export default function Controls({
     p.classList.remove('darkTheme');
     svgs.forEach((svg) => {
       svg.classList.remove('darkTheme');
-    })
-  }
+    });
+  };
 
   return {
     play,
@@ -102,6 +102,6 @@ export default function Controls({
     fireplaceSoundButton,
     coffeeShopSoundButton,
     darkMode,
-    lightMode
+    lightMode,
   };
 }
