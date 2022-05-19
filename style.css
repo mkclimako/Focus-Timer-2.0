@@ -118,8 +118,6 @@ main section.sounds div {
   border-radius: 2.4rem;
 }
 
-
-
 main section.sounds:nth-child(1) {
   grid-area: A;
 }
@@ -166,24 +164,56 @@ main section.sounds div.coffeeShop.selected {
   background: rgba(94, 60, 13, 0.7);
 }
 
+main section.sounds div.fireplace.selected input[type='range'] ,
+main section.sounds div.rain.selected input[type='range'] ,
+main section.sounds div.forest.selected input[type='range'] ,
+main section.sounds div.coffeeShop.selected input[type='range']  {
+  background-color: rgba(255, 255, 255);
+  transition: background-color 1s ease-in;
+
+}
+
+main section.sounds div.fireplace.selected input[type='range']::-webkit-slider-runnable-track ,
+main section.sounds div.rain.selected input[type='range']::-webkit-slider-runnable-track,
+main section.sounds div.forest.selected input[type='range']::-webkit-slider-runnable-track ,
+main section.sounds div.coffeeShop.selected input[type='range']::-webkit-slider-runnable-track {
+  background-color: rgba(255, 255, 255);
+  transition: background-color 1s ease-in;
+
+
+}
+
+main section.sounds div.fireplace.selected input[type='range']::-webkit-slider-thumb,
+main section.sounds div.rain.selected input[type='range']::-webkit-slider-thumb,
+main section.sounds div.forest.selected input[type='range']::-webkit-slider-thumb,
+main section.sounds div.coffeeShop.selected input[type='range']::-webkit-slider-thumb {
+  background-color: rgba(255, 255, 255);
+  transition: background-color 1s ease-in;
+
+
+}
 
 input[type='range'] {
   -webkit-appearance: none;
   appearance: none;
-  background: rgba(0, 0, 0, 0.2);
-  
+  background-color: rgba(0, 0, 0, 0.2);
+
   cursor: pointer;
   width: 9.2rem;
   height: 0.5rem;
+
   border-radius: 1rem;
 
+  transition: background-color 1s ease-in;
 }
 
 input[type='range']::-webkit-slider-runnable-track {
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 0.5rem;
   border-radius: 1rem;
-  
+
+  transition: background-color 1s ease-in;
+
 }
 
 input[type='range']::-webkit-slider-thumb {
@@ -192,7 +222,10 @@ input[type='range']::-webkit-slider-thumb {
   background-color: #323239;
 
   height: 1.2rem;
-  width: 1.2rem; 
+  width: 1.2rem;
   margin-top: -0.35rem;
   border-radius: 1rem;
+
+  transition: background-color 1s ease-in;
+
 }
