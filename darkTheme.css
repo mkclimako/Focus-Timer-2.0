@@ -19,7 +19,7 @@ p.darkTheme span {
 }
 
 main section.timer section.controls button svg.darkTheme path,
-section.sounds button svg.darkTheme path {
+section.sounds div svg.darkTheme path {
   fill: var(--card-text-selected);
   transition: fill 1s ease-in;
 }

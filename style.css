@@ -102,18 +102,23 @@ main section.sounds {
   gap: 3.2rem;
 }
 
-main section.sounds button {
-  border: none;
-
+main section.sounds div {
   width: 13.8rem;
   height: 15.2rem;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+
   background: var(--bg-cards);
-  /* background: rgba(0, 0, 0, 0.6); dark mode */
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   border-radius: 2.4rem;
 }
+
+
 
 main section.sounds:nth-child(1) {
   grid-area: A;
@@ -131,32 +136,63 @@ main section.sounds:nth-child(4) {
   grid-area: D;
 }
 
-button {
+section.sounds div {
   cursor: pointer;
 }
 
-main section.controls button svg path,
-main section.sounds button svg path {
+main section.controls div svg path,
+main section.sounds div svg path {
   fill: var(--primary-color);
   transition: fill 1s ease-in;
 }
 
-main section.sounds button.selected svg path {
+main section.sounds div.selected svg path {
   fill: var(--card-text-selected);
 }
 
-main section.sounds button.fireplace.selected {
+main section.sounds div.fireplace.selected {
   background: rgba(173, 64, 18, 0.7);
 }
 
-main section.sounds button.rain.selected {
+main section.sounds div.rain.selected {
   background: rgba(1, 190, 248, 0.7);
 }
 
-main section.sounds button.forest.selected {
+main section.sounds div.forest.selected {
   background: rgba(19, 197, 135, 0.7);
 }
 
-main section.sounds button.coffeeShop.selected {
+main section.sounds div.coffeeShop.selected {
   background: rgba(94, 60, 13, 0.7);
+}
+
+
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(0, 0, 0, 0.2);
+  
+  cursor: pointer;
+  width: 9.2rem;
+  height: 0.5rem;
+  border-radius: 1rem;
+
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  background: rgba(0, 0, 0, 0.5);
+  height: 0.5rem;
+  border-radius: 1rem;
+  
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #323239;
+
+  height: 1.2rem;
+  width: 1.2rem; 
+  margin-top: -0.35rem;
+  border-radius: 1rem;
 }
