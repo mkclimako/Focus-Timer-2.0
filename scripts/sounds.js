@@ -7,6 +7,15 @@ export default function Sounds() {
   const fireplace = new Audio('./src/sounds/Lareira.wav');
   const coffeeShop = new Audio('./src/sounds/Cafeteria.wav');
 
+  const forestVolumeControl = document.querySelector('.forestVolumeControl');
+  const rainVolumeControl = document.querySelector('.rainVolumeControl');
+  const fireplaceVolumeControl = document.querySelector(
+    '.fireplaceVolumeControl'
+  );
+  const coffeeShopVolumeControl = document.querySelector(
+    '.coffeeShopVolumeControl'
+  );
+
   forest.loop = true;
   rain.loop = true;
   fireplace.loop = true;
@@ -20,6 +29,26 @@ export default function Sounds() {
     timeEnd.play();
   };
 
+  const forestVolumeControlBtn = () => {
+    let forestVolume = forestVolumeControl.value / 100;
+    forest.volume = forestVolume;
+  };
+
+  const rainVolumeControlBtn = () => {
+    let rainVolume = rainVolumeControl.value / 100;
+    rain.volume = rainVolume;
+  };
+
+  const fireplaceVolumeControlBtn = () => {
+    let fireplaceVolume = fireplaceVolumeControl.value / 100;
+    fireplace.volume = fireplaceVolume;
+  };
+
+  const coffeeShopeVolumeControlBtn = () => {
+    let coffeeShopVolume = coffeeShopVolumeControl.value / 100;
+    coffeeShop.volume = coffeeShopVolume;
+  };
+
   return {
     buttonClickSound,
     sessionCompleted,
@@ -27,5 +56,9 @@ export default function Sounds() {
     rain,
     fireplace,
     coffeeShop,
+    forestVolumeControlBtn,
+    rainVolumeControlBtn,
+    fireplaceVolumeControlBtn,
+    coffeeShopeVolumeControlBtn,
   };
 }
