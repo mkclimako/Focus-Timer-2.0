@@ -42,4 +42,3 @@ export {
   p,
   svgs,
 };
-
