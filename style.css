@@ -164,6 +164,10 @@ main section.sounds div.coffeeShop.selected {
   background: rgba(94, 60, 13, 0.7);
 }
 
+
+label {
+  display: none;
+}
 input[type='range'] {
   -webkit-appearance: none;
   appearance: none;

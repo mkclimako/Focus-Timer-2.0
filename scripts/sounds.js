@@ -7,13 +7,13 @@ export default function Sounds() {
   const fireplace = new Audio('./src/sounds/Lareira.wav');
   const coffeeShop = new Audio('./src/sounds/Cafeteria.wav');
 
-  const forestVolumeControl = document.querySelector('.forestVolumeControl');
-  const rainVolumeControl = document.querySelector('.rainVolumeControl');
+  const forestVolumeControl = document.querySelector('#forestVolumeControl');
+  const rainVolumeControl = document.querySelector('#rainVolumeControl');
   const fireplaceVolumeControl = document.querySelector(
-    '.fireplaceVolumeControl'
+    '#fireplaceVolumeControl'
   );
   const coffeeShopVolumeControl = document.querySelector(
-    '.coffeeShopVolumeControl'
+    '#coffeeShopVolumeControl'
   );
 
   forest.loop = true;
