@@ -1,0 +1,25 @@
+body.darkTheme {
+  color: var(--card-text-selected);
+  background-color: var(--primary-color);
+  background-image: url('../src/images/darkmode/darkmode.jpg');
+  transition: background-image 1s ease-in;
+
+  position: relative;
+}
+
+main.darkTheme {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 1s ease-in;
+}
+
+main section.timer p.darkTheme,
+p.darkTheme span {
+  color: var(--card-text-selected);
+  transition: color 1s ease-in;
+}
+
+main section.timer section.controls button svg.darkTheme path,
+section.sounds div svg.darkTheme path {
+  fill: var(--card-text-selected);
+  transition: fill 1s ease-in;
+}
