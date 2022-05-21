@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   font-size: 62.5%;
 
@@ -16,6 +10,12 @@
   --bg-body: hsla(0, 0%, 100%, 1);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 
@@ -23,8 +23,24 @@ body {
   background-image: url('src/images/forest.jpg');
   transition: background-image 1s ease-in;
 
+  width: 100vw;
+  height: 100vh;
+}
+
+.page {
   width: 100%;
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeContainer {
+  width: 100%;
+  height: 8rem;
+  position: relative;
 }
 
 .themeContainer button {
@@ -39,7 +55,6 @@ main {
   width: 82rem;
   height: 37.6rem;
 
-  margin: 19rem auto;
   padding: 2rem;
 
   display: flex;
@@ -49,7 +64,7 @@ main {
   transition: background-color 1s ease-in;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
     rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
-    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 0.1rem inset;
   border-radius: 2.4rem;
 }
 
@@ -164,7 +179,6 @@ main section.sounds div.coffeeShop.selected {
   background: rgba(94, 60, 13, 0.7);
 }
 
-
 label {
   display: none;
 }
@@ -258,3 +272,5 @@ main
 
   transition: all 1s ease-in;
 }
+
+/*1536x864*/
