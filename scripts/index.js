@@ -22,6 +22,7 @@ import Timer from './timer.js';
 import Sounds from './sounds.js';
 import Events from './events.js';
 
+
 const sound = Sounds();
 const control = Controls({
   playButton,
@@ -47,4 +48,6 @@ const timer = Timer({
   sessionCompleted: sound.sessionCompleted,
 });
 
-Events({ control, timer, sound });
+
+
+Events({ control, timer, sound});

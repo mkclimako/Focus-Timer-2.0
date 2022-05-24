@@ -49,6 +49,10 @@ export default function Timer({
     }, 1000);
   };
 
+  const restTime = () => {
+    
+  }
+
   const moreMinutes = () => {
     minutes += 5;
     if (minutes > 60) {

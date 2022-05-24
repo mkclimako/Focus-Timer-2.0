@@ -274,4 +274,8 @@ main
   transition: all 1s ease-in;
 }
 
+::-webkit-scrollbar {
+ display: none;
+}
+
 /*1536x864*/
