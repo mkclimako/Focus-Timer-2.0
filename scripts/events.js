@@ -12,6 +12,7 @@ import {
   darkModeButton,
   lightModeButton,
 } from './elements.js';
+
 export default function Events({ control, timer, sound }) {
   playButton.addEventListener('click', () => {
     control.play();

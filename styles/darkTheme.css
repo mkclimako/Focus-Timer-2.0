@@ -1,7 +1,7 @@
 body.darkTheme {
   color: var(--card-text-selected);
   background-color: var(--primary-color);
-  background-image: url('../src/images/darkmode/darkmode.jpg');
+  background-image: url('../src/images/darkmode/darkmode1.jpg');
   transition: background-image 1s ease-in;
 
   position: relative;
