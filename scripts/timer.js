@@ -19,7 +19,7 @@ export default function Timer({
     minutes = prompt('How many minutes would you like to set?');
     let isNumber = typeof minutes === 'Number';
     if (minutes < 25 || minutes !== isNumber) {
-      minutes = 25;
+      minutes = 45;
     }
     updateDisplay(minutes, '0');
   };
