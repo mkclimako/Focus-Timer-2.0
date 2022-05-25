@@ -12,14 +12,15 @@ main.darkTheme {
   transition: background-color 1s ease-in;
 }
 
-main section.timer p.darkTheme,
+main section#timer p.darkTheme,
 p.darkTheme span {
   color: var(--card-text-selected);
   transition: color 1s ease-in;
 }
 
-main section.timer section.controls button svg.darkTheme path,
+main section#timer section.controls button svg.darkTheme path,
 section.sounds div svg.darkTheme path {
   fill: var(--card-text-selected);
   transition: fill 1s ease-in;
+  border: 1px solid red;
 }

@@ -4,7 +4,7 @@
   --primary-color: hsla(240, 6%, 21%, 1);
   --card-text-selected: hsla(0, 0%, 100%, 1);
 
-  --bg-cards: rgba(208, 198, 180, 0.2);
+  --bg-cards: rgba(208, 198, 180, 0.4);
   --bg-main: hsla(0, 0%, 100%, 0.1);
   --bg-cards-selected: hsla(194, 97%, 31%, 0.5);
   --bg-body: hsla(0, 0%, 100%, 1);
@@ -97,18 +97,6 @@ main section#timer p,
 p span {
   color: var(--primary-color);
   transition: color 1s ease-in;
-}
-
-main section#restTimer p {
-  font-weight: 500;
-  font-size: 12.6rem;
-  line-height: 13.68rem;
-
-  text-align: center;
-
-  color: var(--primary-color);
-
-  width: 100%;
 }
 
 main section#timer section.controls {
