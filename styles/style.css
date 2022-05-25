@@ -50,6 +50,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 main {
   width: 82rem;
@@ -66,6 +67,7 @@ main {
     rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
     rgba(255, 255, 255, 0.1) 0px 0px 0px 0.1rem inset;
   border-radius: 2.4rem;
+
 }
 
 main section#timer {
@@ -73,6 +75,7 @@ main section#timer {
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
+
 }
 
 main section#timer p {
@@ -85,22 +88,15 @@ main section#timer p {
   color: var(--primary-color);
 
   width: 100%;
-
+ 
   animation: pulse 1s infinite;
+  
 }
 
 main section#timer p,
 p span {
   color: var(--primary-color);
   transition: color 1s ease-in;
-}
-
-main section#restTimer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10rem;
 }
 
 main section#restTimer p {
@@ -114,11 +110,17 @@ main section#restTimer p {
 
   width: 100%;
 }
+
 main section#timer section.controls {
   display: flex;
   justify-content: space-evenly;
   gap: 4rem;
   width: 100%;
+
+}
+
+.hide, section#timer.hide, section#restTimer.hide {
+  display: none;
 }
 
 main section#timer section.controls button {
@@ -291,5 +293,7 @@ main
 }
 
 ::-webkit-scrollbar {
-  display: none;
+ display: none;
 }
+
+
