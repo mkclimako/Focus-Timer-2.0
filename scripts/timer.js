@@ -16,12 +16,11 @@ export default function Timer({
   };
 
   const sessionTime = () => {
-    minutes = prompt('How many minutes would you like to set?');
-    let isNumber = typeof minutes === 'Number';
-    if (minutes < 25 || minutes !== isNumber) {
+    minutes = Number(prompt('How many minutes would you like to set?') || 45)
+    if (minutes < 25 || minutes > 60 || isNaN(minutes)) {
       minutes = 45;
     }
-    updateDisplay(minutes, '0');
+    updateDisplay(minutes, 0);
   };
 
   const counter = () => {
@@ -79,7 +78,7 @@ export default function Timer({
 
   const resetCounter = () => {
     resetControls();
-    updateDisplay(minutes, '0');
+    updateDisplay(minutes,0);
     pauseCounter();
   };
 
