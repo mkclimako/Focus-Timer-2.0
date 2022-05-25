@@ -6,6 +6,7 @@ export default function Timer({
 }) {
   let minutes = Number(minutesDisplay.textContent);
   let timerTimeout;
+  let round = new Boolean(false);
 
   const updateDisplay = (newMinutes, seconds) => {
     newMinutes = newMinutes === undefined ? minutes : newMinutes;
@@ -16,11 +17,12 @@ export default function Timer({
   };
 
   const sessionTime = () => {
-    minutes = Number(prompt('How many minutes would you like to set?') || 45)
+    minutes = Number(prompt('How many minutes would you like to set?') || 45);
     if (minutes < 25 || minutes > 60 || isNaN(minutes)) {
       minutes = 45;
     }
     updateDisplay(minutes, 0);
+    return minutes;
   };
 
   const counter = () => {
@@ -32,9 +34,13 @@ export default function Timer({
       updateDisplay(minutes, 0);
 
       if (isFinished) {
-        resetControls();
-        resetCounter();
         sessionCompleted();
+        resetCounter();
+        if (round == false) {
+          round = true;
+          restTime();
+        }
+
         return;
       }
 
@@ -49,8 +55,9 @@ export default function Timer({
   };
 
   const restTime = () => {
-    
-  }
+    updateDisplay(0, 2);
+    counter();
+  };
 
   const moreMinutes = () => {
     minutes += 5;
@@ -78,8 +85,8 @@ export default function Timer({
 
   const resetCounter = () => {
     resetControls();
-    updateDisplay(minutes,0);
     pauseCounter();
+    updateDisplay(minutes, 0);
   };
 
   return {

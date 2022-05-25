@@ -50,7 +50,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 main {
   width: 82rem;
@@ -69,14 +68,42 @@ main {
   border-radius: 2.4rem;
 }
 
-main section.timer {
+main section#timer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
 }
 
-main section.timer p {
+main section#timer p {
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 13.68rem;
+
+  text-align: center;
+
+  color: var(--primary-color);
+
+  width: 100%;
+
+  animation: pulse 1s infinite;
+}
+
+main section#timer p,
+p span {
+  color: var(--primary-color);
+  transition: color 1s ease-in;
+}
+
+main section#restTimer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10rem;
+}
+
+main section#restTimer p {
   font-weight: 500;
   font-size: 12.6rem;
   line-height: 13.68rem;
@@ -87,25 +114,14 @@ main section.timer p {
 
   width: 100%;
 }
-
-main section.timer p,
-p span {
-  color: var(--primary-color);
-  transition: color 1s ease-in;
-}
-
-main section.timer section.controls {
+main section#timer section.controls {
   display: flex;
   justify-content: space-evenly;
   gap: 4rem;
   width: 100%;
 }
 
-.hide {
-  display: none;
-}
-
-main section.timer section.controls button {
+main section#timer section.controls button {
   background: none;
   border: none;
 }
@@ -275,7 +291,5 @@ main
 }
 
 ::-webkit-scrollbar {
- display: none;
+  display: none;
 }
-
-/*1536x864*/
