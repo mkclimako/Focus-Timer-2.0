@@ -55,7 +55,7 @@ export default function Timer({
   };
 
   const restTime = () => {
-    updateDisplay(0, 2);
+    updateDisplay(5, 0);
     counter();
   };
 
